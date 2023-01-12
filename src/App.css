@@ -1,38 +1,85 @@
-.App {
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /*  ===============================
+      Colors
+      ===============================   */
+  --bg-Verydarkblue: hsl(233, 47%, 7%);
+  --bg-Darkdesaturatedblue: hsl(244, 38%, 16%);
+  --Softviolet: hsl(277, 64%, 61%);
+  --tm-White: hsl(0, 0%, 100%);
+  --tp-Slightlytransparentwhite: hsla(0, 0%, 100%, 0.75);
+  --th-Slightlytransparentwhite: hsla(0, 0%, 100%, 0.6);
+
+  /* ===============================
+     Fonts
+     ===============================  */
+
+  --ff-inter: "Inter", sans-serif;
+  --ff-lexend: "Lexend Deca", sans-serif;
+  --fs-fontsize: 1rem;
+  --fw-400: 400;
+  --fw-700: 700;
+  --line-height: 1.6;
+}
+
+/* ==============================
+   Spacing
+   ==============================  */
+
+.mb-16 {
+  margin-bottom: 1rem;
+}
+
+.mb-20 {
+  margin-bottom: 1.25rem;
+}
+.mb-24 {
+  margin-bottom: 1.5rem;
+}
+/* ==============================
+   Body
+   ==============================  */
+
+body {
+  margin: 0;
+  font-family: var(--ff-inter);
+  font-size: var(--fs-fontsize);
+  font-weight: var(--fw-400);
+  line-height: var(--line-height);
+  background-color: var(--bg-Verydarkblue);
+  color: var(--tm-White);
   text-align: center;
+  letter-spacing: 0.5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 768px) {
+  body {
+    text-align: left;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  list-style: none;
+}
+
+/* ==============================
+Layout
+============================== */
+
+main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* ================================
+   Typography
+   ================================ */
